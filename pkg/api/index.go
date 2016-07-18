@@ -34,17 +34,17 @@ func setIndexViewData(c *middleware.Context) (*dtos.IndexViewData, error) {
 
 	var data = dtos.IndexViewData{
 		User: &dtos.CurrentUser{
-			Id:             c.UserId,
-			IsSignedIn:     c.IsSignedIn,
-			Login:          c.Login,
-			Email:          c.Email,
-			Name:           c.Name,
-			OrgId:          c.OrgId,
-			OrgName:        c.OrgName,
-			OrgRole:        c.OrgRole,
-		// GravatarUrl:    dtos.GetGravatarUrl(c.Email),
-		// Trick
-		GravatarUrl:    c.SignedInUser.Email,
+			Id:         c.UserId,
+			IsSignedIn: c.IsSignedIn,
+			Login:      c.Login,
+			Email:      c.Email,
+			Name:       c.Name,
+			OrgId:      c.OrgId,
+			OrgName:    c.OrgName,
+			OrgRole:    c.OrgRole,
+			// GravatarUrl:    dtos.GetGravatarUrl(c.Email),
+			// Trick
+			GravatarUrl:    c.SignedInUser.Email,
 			IsGrafanaAdmin: c.IsGrafanaAdmin,
 			LightTheme:     prefs.Theme == "light",
 			Timezone:       prefs.Timezone,

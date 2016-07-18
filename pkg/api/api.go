@@ -12,6 +12,7 @@ import (
 
 // Register adds http routes
 func Register(r *macaron.Macaron) {
+	//check if not login or not admin but request admin url
 	reqSignedIn := middleware.Auth(&middleware.AuthOptions{ReqSignedIn: true})
 	reqGrafanaAdmin := middleware.Auth(&middleware.AuthOptions{ReqSignedIn: true, ReqGrafanaAdmin: true})
 	reqEditorRole := middleware.RoleAuth(m.ROLE_EDITOR, m.ROLE_ADMIN)
