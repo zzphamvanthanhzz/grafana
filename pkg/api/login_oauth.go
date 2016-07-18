@@ -20,6 +20,7 @@ import (
 	"github.com/grafana/grafana/pkg/setting"
 	"github.com/grafana/grafana/pkg/social"
 )
+
 var (
 	ClientID     = "1611573890337142220"
 	ClientSecret = "CQ12lu83OfNHCG1HoO8E"

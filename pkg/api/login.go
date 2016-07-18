@@ -41,6 +41,8 @@ func LoginView(c *middleware.Context) {
 
 	viewData.Settings["googleAuthEnabled"] = false
 	viewData.Settings["githubAuthEnabled"] = false
+	viewData.Settings["zaloAuthEnabled"] = true
+
 	viewData.Settings["disableUserSignUp"] = true
 	viewData.Settings["loginHint"] = false
 	viewData.Settings["allowUserPassLogin"] = true

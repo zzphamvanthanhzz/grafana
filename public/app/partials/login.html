@@ -39,38 +39,36 @@
 				</div>
 			</form>
 
-			<div ng-if="loginMode">
-				<div class="text-center login-divider" ng-show="oauthEnabled && allowUserPassLogin">
-					<div class="login-divider-line">
-						<span class="login-divider-text">
-							Or login with
-						</span>
-					</div>
-				</div>
+                        <div ng-if="loginMode">
+                                <div class="text-center login-divider" ng-if="oauthEnabled">
+                                        <div class="login-divider-line">
+                                                <span class="login-divider-text">
+                                                        Or login with
+                                                </span>
+                                        </div>
+                                </div>
 
-				<div class="clearfix"></div>
+                                <div class="clearfix"></div>
 
-				<div class="login-oauth text-center" ng-show="oauthEnabled">
-					<a class="btn btn-large btn-google" href="login/google" target="_self" ng-if="googleAuthEnabled">
-						<i class="fa fa-google"></i>
-						with Google
-					</a>
-					<a class="btn btn-large btn-github" href="login/github" target="_self" ng-if="githubAuthEnabled">
-						<i class="fa fa-github"></i>
-						with Github
-					</a>
-				</div>
-			</div>
+                                <div class="login-oauth text-center" ng-if="oauthEnabled">
+                                        <a class="btn btn-large btn-google" href="login/google" target="_self" ng-if="googleAuthEnabled">
+                                                <i class="fa fa-google"></i>
+                                                with Google
+                                        </a>
+                                        <a class="btn btn-large btn-github" href="login/github" target="_self" ng-if="githubAuthEnabled">
+                                                <i class="fa fa-github"></i>
+                                                with Github
+                                        </a>
+                                        <a class="btn btn-large btn-zalo" href="login/zalo" target="_self" ng-if="zaloAuthEnabled">
+                                                <i class="fa"></i>
+                                                with Zalo
+                                        </a>
+
+                                </div>
+                        </div>
 
 			<div class="clearfix"></div>
 
-			<div class="text-center password-recovery" ng-show="allowUserPassLogin">
-				<div class="text-center">
-					<a href="user/password/send-reset-email">
-						Forgot your password?
-					</a>
-				</div>
-			</div>
 		</div>
 
 	</div>
