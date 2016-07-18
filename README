@@ -28,3 +28,9 @@ Modiy:
 boot.f089af0a.js, remove Profile Infomation form (search ctrl.userForm)
 + remove change password
 
+
+5_Custom giao dien:
+/zserver/grafana-3.0-zalo/public_gen/dashboards/home.json
+
+
+6_Đồng bộ User:

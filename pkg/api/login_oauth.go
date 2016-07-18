@@ -21,12 +21,33 @@ import (
 	"github.com/grafana/grafana/pkg/social"
 )
 
+// For development
+// var (
+// 	ClientID     = "1611573890337142220"
+// 	ClientSecret = "CQ12lu83OfNHCG1HoO8E"
+// 	AuthURL      = "https://oauth.zaloapp.com/v2/auth"
+// 	TokenURL     = "https://oauth.zaloapp.com/v2/access_token"
+// 	callbackUrl  = "http://dev.somonitor.zapps.vn/zalologin"
+// 	QueryURL     = "http://openapi.zaloapp.com/query"
+// )
+
+// var (
+// 	dbHost     = "10.30.58.44"
+// 	dbPort     = "3306"
+// 	dbName     = "SO_QoS"
+// 	dbUser     = "so_qos"
+// 	dbPassword = "fyZniUBCFXr6gBaT"
+// )
+
+// For production
 var (
-	ClientID     = "1611573890337142220"
-	ClientSecret = "CQ12lu83OfNHCG1HoO8E"
+	//ClientID     = "1611573890337142220"
+	ClientID = "1514800816656779804"
+	//ClientSecret = "CQ12lu83OfNHCG1HoO8E"
+	ClientSecret = "b8BvEb4N3ht86gRA7TNf"
 	AuthURL      = "https://oauth.zaloapp.com/v2/auth"
 	TokenURL     = "https://oauth.zaloapp.com/v2/access_token"
-	callbackUrl  = "http://dev.somonitor.zapps.vn/zalologin"
+	callbackUrl  = "http://somonitor.zapps.vn/zalologin"
 	QueryURL     = "http://openapi.zaloapp.com/query"
 )
 
