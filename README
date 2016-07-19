@@ -29,8 +29,16 @@ boot.f089af0a.js, remove Profile Infomation form (search ctrl.userForm)
 + remove change password
 
 
+5_Delete cookie (Error too many redirects)
 5_Custom giao dien:
 /zserver/grafana-3.0-zalo/public_gen/dashboards/home.json
 
 
 6_Đồng bộ User:
+*Check database xem 3.0 va 2.6 co gi khac nhau ko
+*2 user PVT Mobi login vao ra Thien Ngan va Nguyen Si Nhan
+*Move User từ DB cũ sang DB mới.
+
+
+7_Pie Chart:
+chỉnh file piechart_ctrl.js để đúng đường dẫn mới có phần options.
