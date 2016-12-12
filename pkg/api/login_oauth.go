@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"time"
 
 	"golang.org/x/oauth2"
 
@@ -69,9 +70,13 @@ func OAuthLoginZalo(w http.ResponseWriter, r *http.Request) {
 
 	url := buffer.String()
 	fmt.Printf("%s\n", url)
-	// expire, _ := time.Parse("2014-11-12T11:45:26.371Z", "1970-11-12T11:45:26.371Z")
-	fmt.Printf("Request %#v\n", *r)
-	r.Body.Close()
+	expire, _ := time.Parse("2014-11-12T11:45:26.371Z", "1970-11-12T11:45:26.371Z")
+
+	defer r.Body.Close()
+	http.SetCookie(w, &http.Cookie{Name: "zsid", Value: "", Domain: ".zaloapp.com", Path: "/", Expires: expire})
+
+	fmt.Println("Request Cookies: ", r.Cookies()["zsid"])
+	fmt.Printf("RespondWriter %#v\n", w.Header())
 	http.Redirect(w, r, url, http.StatusFound) //302
 	// http.Redirect(w, r, url, http.StatusTemporaryRedirect) //307
 }
